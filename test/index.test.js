@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 
-
+import {strict as assert} from "node:assert";
 import capitalize from "../bin/index.js";
 
-if (capitalize('hello') !== 'Hello') {
-    throw new Error("Function doesn't work right!");
-}
-if (capitalize('') !== '') {
-    throw new Error("Function doesn't work right! #Empry string");
-}
+assert.equal(capitalize(''), '');
+assert.equal(capitalize('hello'), 'Hello');
+
+assert.deepEqual({key: 'value'}, {key: 'value'});

@@ -7,5 +7,4 @@ const capitalize = (word) => {
     const restWord = word.slice(1);
     return firstLetter + restWord;
 }
-
 export default capitalize;
